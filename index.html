@@ -3,22 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gravar Vídeo</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js"></script>
+    <title>Gravar e Enviar Vídeo para Firebase</title>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Gravação de Vídeo</h1>
-      <video id="video" autoplay class="video" playsinline></video>
-      <div>
-        <p id="timer">Tempo restante: 60s</p>
-        <button id="startButton" class="button">Iniciar Gravação</button>
-        <button id="stopButton" class="button" disabled>Parar Gravação</button>
-        <button id="uploadButton" class="button" disabled>Enviar Vídeo</button>
-      </div>
-    </div>
+    <h1>Gravar e Enviar Vídeo</h1>
+    <video id="video" width="320" height="240" autoplay></video>
+    <button id="startButton">Iniciar Gravação</button>
+    <button id="stopButton" disabled>Parar Gravação</button>
+    <button id="uploadButton" disabled>Enviar para Firebase</button>
+    <p id="timer">Tempo: 0s</p>
+
     <script src="script.js"></script>
+    <script src="firebase.js"></script>
   </body>
 </html>
