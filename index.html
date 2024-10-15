@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gravar e Enviar Vídeo para Firebase</title>
+    <!-- Adicione as bibliotecas do Firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <!-- Adicione esta linha se você estiver usando autenticação -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <h1>Gravar e Enviar Vídeo</h1>
     <video id="video" width="320" height="240" autoplay></video>
@@ -18,5 +22,6 @@
 
     <script src="script.js"></script>
     <script src="firebase.js"></script>
+    <!-- Certifique-se de que isso está após o script.js -->
   </body>
 </html>

@@ -75,7 +75,7 @@ uploadButton.addEventListener("click", async () => {
 
 // Função para upload para o Firebase
 async function uploadToFirebase(file) {
-  const storageRef = firebase.storage().ref();
+  const storageRef = firebase.storage().ref(); // Acesso ao storage
   const videoRef = storageRef.child(`videos/${Date.now()}.mp4`);
 
   try {
