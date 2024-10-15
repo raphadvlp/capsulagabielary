@@ -15,6 +15,7 @@ h1 {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 .video {
@@ -22,6 +23,7 @@ h1 {
   max-width: 500px;
   border: 2px solid #333;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .button {
@@ -42,4 +44,15 @@ h1 {
 .button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
 }
