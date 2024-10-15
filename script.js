@@ -2,12 +2,12 @@
 
 // Configurações do Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyCvBpaefejjMNPTN_A-yV5s6F0_okQFJZk",
-  authDomain: "capsuladotempo-9d755.firebaseapp.com",
-  projectId: "capsuladotempo-9d755",
-  storageBucket: "capsuladotempo-9d755.appspot.com",
-  messagingSenderId: "869092303974",
-  appId: "1:869092303974:web:7d5b69c10147a178ddb9a7",
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
 };
 
 // Inicializa o Firebase
@@ -42,14 +42,17 @@ function startRecording() {
     .then((stream) => {
       videoElement.srcObject = stream;
       mediaRecorder = new MediaRecorder(stream);
+
       mediaRecorder.ondataavailable = (event) => {
         videoChunks.push(event.data);
       };
+
       mediaRecorder.start();
       startTimer();
     })
     .catch((error) => {
       console.error("Erro ao acessar a câmera: ", error);
+      alert("Não foi possível acessar a câmera. Verifique as permissões.");
     });
 }
 
